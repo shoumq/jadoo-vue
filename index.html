@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jadoo</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Volkhov:wght@700&family=Open+Sans:wght@600&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link href="src/assets/fonts/GoogleSansMed/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <style>
+    .swiper-wrapper {
+      height: 400rem;
+      position: relative;
+      top: -30rem;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #39425D;
+    }
+
+    .swiper-pagination-bullet {
+      width: 12rem;
+      height: 12rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      pagination: {
+        el: ".dots-gap",
+        clickable: true
+      },
+    });
+
+    document.querySelector('#btn').addEventListener('click', () => {
+      alert('Email: ' + document.querySelector('#email').value)
+    })
+
+    document.querySelector('#openBurger').addEventListener('click', () => {
+      document.querySelector('.m_header__menu').style.transform = 'translateX(0)'
+      document.querySelector('body').style.overflowY = 'hidden'
+    })
+
+    document.querySelector('#closeBurger').addEventListener('click', () => {
+      document.querySelector('.m_header__menu').style.transform = 'translateX(10000rem)'
+      document.querySelector('body').style.overflowY = 'auto'
+    })
+  </script>
+</body>
+
+</html>
