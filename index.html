@@ -53,32 +53,6 @@
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      direction: "vertical",
-      pagination: {
-        el: ".dots-gap",
-        clickable: true
-      },
-    });
-
-    document.querySelector('#btn').addEventListener('click', () => {
-      alert('Email: ' + document.querySelector('#email').value)
-    })
-
-    document.querySelector('#openBurger').addEventListener('click', () => {
-      document.querySelector('.m_header__menu').style.transform = 'translateX(0)'
-      document.querySelector('body').style.overflowY = 'hidden'
-    })
-
-    document.querySelector('#closeBurger').addEventListener('click', () => {
-      document.querySelector('.m_header__menu').style.transform = 'translateX(10000rem)'
-      document.querySelector('body').style.overflowY = 'auto'
-    })
-  </script>
 </body>
 
 </html>
